@@ -1,0 +1,54 @@
+.mybooking-nav{
+    background-color: cornflowerblue;  
+}
+.mybooking-heading h2{
+    color: white;
+
+}
+
+.mybooking-navcontainer{
+    display: flex;
+    
+    margin-top: 0;
+}
+.mybooking-navcmn{
+    width: 50%;
+}
+
+.mybooking-backbutton a{
+    float: right;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    background-color: gray;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    margin-right: 0.4rem;
+    
+}
+
+.mybooking-listconatainer{
+    display: flex;
+    background-color: #dddddd;
+    margin-top: 2rem;
+}
+.mybooking-listconatainer .mybooking-item{
+    width: 20%;
+    color: black;
+    
+}
+.mybooking-item5 a{
+    text-decoration: none;
+    padding: 0.7rem;
+    border: 1px solid black;
+    color:white;
+
+    background-color: black;
+    border-radius: 35px;
+    
+
+}
+
+.mybooking-item5{
+    margin-top: 1.2rem;
+}

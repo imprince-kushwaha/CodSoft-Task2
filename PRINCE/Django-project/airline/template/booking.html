@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="/static/css/bookingstyle.css">
+</head>
+<body>
+    <section class="bookingpageh-ead">
+        
+        <div class="bookingpage-nav">
+            {% for i in bookdata %}
+            <div class="booking-navitem from"><h3>From: {{ i.From }}</h3></div>
+            <div class="booking-navitem to"><h3>To: {{ i.To }}</h3></div>
+            <div class="booking-navitem depart"><h3>Depart: {{ i.Depart_date }}</h3></div>
+            <div class="booking-navitem Class"><h3>Class: {{ i.Class }}</h3></div>
+            <div class="booking-navitem back"><a href=""><b>Back</b></a></div>
+            {% endfor %} 
+        </div>
+       
+    </section>
+    <section class="available-flights">
+        <div class="available-flights-container">
+            {% for n in flightdata %}
+            <div class="av av-1">
+                <div class="airline airline1"><input type="radio" onclick="tot_price()" name="airlineradio" id="radio"> <img src="/static/media/plane.png"class="plane"> </div>
+                <div class="airline airline2">{{ n.flight_company }}</div>
+                <div class="airline airline3">{{ n.depart_time }}</div>
+                <div class="airline airline4">{{ n.arrival_time }}</div>
+                <div class="airline airline5"><p name="pricing">₹ {{ n.price }}</p></div>
+                
+                
+            </div>
+            {% endfor %}
+            <!--<div class="av av-2"></div>-->
+            <!--<div class="av av-3"></div>-->
+            <!--<div class="av av-4"></div>-->
+        </div>
+    </section>
+    <footer class="bookingsearch-result">
+        <div class="bookingpage-footer">
+            
+            <div class="flight-footercmn flight-total-flight">
+                <h4 id="totalprice-class">Total Price:</h4>
+                
+            </div>
+            
+            <div class="flight-footercmn booking-footeritem next"><a href="{% url 'pay' %}"><b>Next</b></a></div>
+            
+        </div>
+
+    </footer>
+    <script>
+       function tot_price(){
+
+        // var data1=document.getElementByName("pricing").innerHTML;
+       /* var data2=document.getElementsByName("airlineradio");*/
+        document.getElementById("totalprice-class").innerHTML="Total Price:Rs.1400";
+        /*var i;
+        for(i=0;i<=data2.length;i++){
+            if(data2[i].checked){
+                
+                document.getElementByName("totalprice-class").innerHTML=data1[i];
+
+            }
+        }*/
+       }
+
+    </script>
+    
+</body>
+</html>

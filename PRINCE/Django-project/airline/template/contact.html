@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block additional_styles %}
+<style>
+    .header{
+        background-image:url(/static/media/2pic.jpeg);
+        background-color: black;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    }
+</style>
+{% endblock %}
+{% block content1 %}
+{% block content %}
+<section class="contactpg">
+                
+    <div class="wrapper">
+        <div class="contactinfo">
+            <div class="contactinfo1">
+                <h3><i class="fas fa-map-marker-alt fa-1x text-red"></i>LOCATIONS</h3>
+                <p>SSJ-246 Doorwani Nagar ADA Naini</p><br>
+
+                <h3><i class="fas fa-envelope fa-1x text-red"></i>E-MAIL</h3>
+                <p>princeking19ald@gmail.com</p><br>
+
+                <h3><i class="fas fa-phone-square-alt fa-1x text-red"></i>CALL</h3>
+                <p>+91 6307807064</p>
+            </div>
+
+
+
+        </div>
+        <div class="queryinfo">
+            <div class="queryinfo1">
+                <h1 id="contactus">Contact Us</h1><br>
+                
+                <form  method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <label for="username">Username*</label><br>
+                    <input name="contact-username" type="text" id="username" class="h"><br><br>
+                    <label for="email">Email*</label><br>
+                    <input name="contact-email" type="email" id="email" class="h"><br><br>
+                    <label for="phone">Phone*</label><br>
+                    <input name="contact-phone" type="phone" id="phone" class="h"><br><br>
+                    <label for="message">Message*</label><br>
+                    <textarea name="contact-message" id="" cols="30" rows="10" class="h" placeholder="write here...."></textarea><br>
+                    <button type="reset" class="btn1">Reset</button>
+                    <button type="submit" class="btn1">Submit</button>
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% endblock content1 %}

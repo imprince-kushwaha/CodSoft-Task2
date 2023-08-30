@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+/* .header{
+    
+    background-image: linear-gradient(rgba(90, 88, 88, 0.519),rgba(14, 11, 11, 0.259)); 
+    
+    background-color: black;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+} */
+
+.item{
+    
+    list-style: none;
+    display: inline-block;
+    padding-right: 2rem;
+}
+.item a{
+    text-decoration: none;
+}
+.nav-items .item{
+    padding: 1rem;
+
+
+}
+.nav-items .item a{
+    font-weight: 500;
+    color: black;
+}
+.nav-items .logo{
+    text-align: center;
+    font-weight: 500;
+    color:black;
+}
+
+.navbar a:hover{
+    color: black;
+    border-bottom: 2px solid black;
+    transition-duration: 0.4s;
+    
+}
+.navbar a:active{
+    background-color:saddlebrown;
+    color:white;
+    border-bottom: 5px solid black;
+}
+.container{
+    max-width: 1200px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.container1{
+    display: flex;
+    
+    
+    
+}
+.content{
+    
+    width: 50%;
+    height: 70vh;
+    color: black;
+    text-align: center;
+    font-weight: 1500;
+    padding-top: 7rem;
+    
+    
+}
+.common-content{
+    font-size: 2rem;
+}
+
+#element{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.bookinfo{
+    
+    width: 50%;
+    height: 70vh;
+    text-align: center;
+    padding-top: 7rem;
+    
+}
+.bookinfo-heading{
+    color: black;
+}
+
+.blink{
+    animation: blink 2s linear infinite;
+    animation-delay: 1s;
+    
+    color: brown;
+}
+@keyframes blink{
+    50%{
+        opacity: 0;
+    }
+} 
+.bookinfo-detailcontainer{
+    display: inline-flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background-color:gray;
+    opacity: 0.92
+}
+ .Login-link a{
+    color: blue;
+    font-size: 1.8rem;
+}
+.detail{
+    border-bottom: 2px solid black;
+}
+
+
+.poproutes-head{
+    font-size: 2rem;
+    font-weight: 500;
+    display: inline-block;
+    background: linear-gradient(180deg,red,yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.popflight{
+    position: relative;
+}
+.destination-container img{
+    display: block;
+    width: 100%;
+    max-height: 325px;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+   
+    position: relative;
+}
+.destination-name{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    color: #dddddd;
+}
+.popflight::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.871);
+    opacity: 1;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+
+}
+.popflight:hover .destination-name{
+    opacity: 1;
+}
+.popflight:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+
+
+
+
+.wrapper{
+    display: flex;
+    max-width: 1200px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    
+
+}
+.wrapper .contactinfo{
+    background-image: linear-gradient(rgba(20, 16, 16, 0.59),rgba(28, 23, 23, 0.92)),url(/static/media/contact.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    border: 2px solid black;
+
+}
+.wrapper .queryinfo{
+    border: 2px solid black;
+    width: 50%;
+    background-color: #dddddd;
+}
+    
+.queryinfo .queryinfo1{
+    padding: 1.5rem;
+}
+.queryinfo .queryinfo1 h1{
+    border-bottom: 4px solid rgba(255, 0, 0, 0.752);
+    padding-bottom: 1rem;
+}
+.contactinfo i{
+    color: red;
+}
+.contactinfo1{
+    padding: 5rem 0rem 5rem 1.5rem;
+}
+.btn1{
+    background-color: red;
+    
+    color: black;
+    border: 2px solid rgba(255, 0, 0, 0.752);
+}
+.contactinfo1 p, .contactinfo1 h3{
+    color: white;
+
+
+}
+
+
+.containerflight{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.containerflight .popflight{
+    width: 33.33%;
+    border: 2px solid black;
+    height: 45vh;
+    
+    
+}
+
+.footer{
+    border: 2px solid black;
+    padding: 1.5rem;
+    
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    background-color: #263238;
+}
+.footer i, .footer p{
+    color: white;
+    padding: 10px;
+    
+}
+
+.userpg{
+    background-image: url(/static/media/travelbookingback.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.userpanel{
+    display: flex;
+    flex-direction: column;
+    opacity: 0.93;
+    
+    
+}
+.usercmn{
+    width: 20%;
+    height: 10vh;
+    border: 2px solid black;
+    background-color:dimgrey;
+}
+.usercmn a{
+    text-decoration: none;
+    color: black;
+}
+.username{
+    height: 20vh;
+}
+.user-logout{
+    height: 50vh;
+}
+.booking-container{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    
+    
+    
+    border: 2px solid black;
+    height: 80vh;
+    width: 60vw;
+    background-color: #dddddd;
+    opacity: 0.85;
+}
+
+
+
+.bookingvia{
+    padding: 2rem;
+}
+
+
+.flightin input{
+    width: 90%;
+    
+}
+.flightin select{
+    width: 90%;
+}
+.book-flight-button{
+    background-color:cornflowerblue;
+    color: white;
+}
+
+
+
+
+

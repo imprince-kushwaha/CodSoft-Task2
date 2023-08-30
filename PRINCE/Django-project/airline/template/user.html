@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User page</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+</head>
+<body style="background: black;">
+    <section class="userpg">
+        <div class="userpanel">
+            <div class="usercmn username">Welcome!!!!<br><center>{{ request.user }}</center></div>
+            <div class="usercmn user-editprofile"><a href="">Edit your profile</a></div>            
+            <div class="usercmn user-mybooking"><a href="/mybooking">My Bookings</a></div>
+            <div class="usercmn user-weathercheck"><a href="/weather">Check-Weather</a></div>  
+            <div class="usercmn user-logout">
+                <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+            </div>
+        </div>
+        
+
+        <div class="booking-container">
+            <div class="bookingvia">
+                <center><button class="book-flight-button">Start Your Journey Here!  </button></center>
+                <div class="travrelbackoption">
+                    <label for="One-Way">One-way</label>
+                    <input type="radio" name="Trip" id="One-way">
+                    <label for="Round-Trip">Round-Trip</label>
+                    <input type="radio" name="Trip" id="Round-Trip">
+                
+                    
+                </div>
+                <div class="flightin">
+                    <form method="post" action="{% url 'bkr' %}">
+                        {% csrf_token %}
+                        <label for="from">From:</label><br>
+                        <!-- <input type="text" id="from" name="from" placeholder="From..."> -->
+                        <select>
+                            <option value=""></option>
+                            <option value="Allahabad">Allahabad</option>
+                        </select><br>
+                        <label for="to">To:</label><br>
+                        <select>
+                            <option value=""></option>
+                            <option value="Delhi">Delhi</option>
+                        </select><br><br>
+                        <label for="depart-date">Departure date:</label><br>
+                        <input type="date" name="depart-date" id="depart-date"><br><br>
+                        <label for="return-date">Return date:</label><br>
+                        <input type="date" name="return-date" id="return-date"><br><br>
+                        <label for="class">Class:</label><br>
+                        <select name="class" id="class">
+                            <option value="economy">economy</option>
+                            <option value="first">first</option>
+                            <option value="business">business</option>
+                        </select><br><br>
+                        <center><button type="submit" id="flight-search"><a href="{% url 'bkr' %}"></a>Search Flights</button></center>
+    
+    
+                    </form>
+                </div>
+               
+
+            </div>
+        </div>
+    </section>
+    
+        
+    
+    
+</body>
+</html>

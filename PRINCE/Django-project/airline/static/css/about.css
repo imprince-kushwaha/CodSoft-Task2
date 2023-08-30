@@ -1,0 +1,36 @@
+.abt-container{
+    background-color:lightcyan;
+    background-image: url(/static/media/aboutpgimg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+#container{
+    display:flex;
+    /*background-color: aquamarine;*/
+    align-content: center;
+    justify-content: center;
+}
+
+#container div{
+    background: linear-gradient(grey,black);
+    opacity:0.8; 
+    border-radius:20px; 
+    align-items:center;
+    margin: 20px;
+    width:100%;
+    padding: 10px;
+    box-shadow:0 0 0 3px black;
+
+
+}
+p{
+    color:white;
+
+}
+ #p1{
+    color:blue;
+}
